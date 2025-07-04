@@ -1,0 +1,27 @@
+@import "../../styles/helpers";
+
+.carouselTitle {
+  padding: 24px;
+}
+
+.img {
+  height: 355px;
+  display: block;
+  maxWidth: 400;
+  overflow: hidden;
+  width: 100%;
+}
+
+.stepperButton {
+  text-transform: uppercase;
+  color: $default;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    color: $default;
+    background-color: transparent;
+    border: none;
+  }
+}
+

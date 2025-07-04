@@ -1,0 +1,1756 @@
+///////// Navbar //////////
+.header-navbar {
+  padding: $navbar-padding;
+  border: none;
+  background: $body-bg;
+
+  .nav-link {
+    padding: 0;
+  }
+
+  .input-group {
+    width: 245px;
+    height: 45px;
+
+    .form-control {
+      font-size: $font-size-sm;
+      font-weight: $font-weight-normal;
+      &::placeholder {
+        color: $base-middle-gray;
+      }
+    }
+  }
+}
+
+.navbar {
+  border-radius: 4px;
+  .navbar-toggler {
+    border: none;
+  }
+}
+
+///////// Input Group //////////
+.input-group {
+  overflow: hidden;
+
+  &.btn:focus {
+    box-shadow: none;
+  }
+}
+
+.input-group-prepend {
+  display: flex;
+  justify-content: center;
+  height: 45px;
+  background-color: $white;
+  transition: background-color ease-in-out 0.15s;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.form-control {
+  background-color: $white;
+  height: 45px;
+  border-radius: .5rem;
+  padding-left: 1rem;
+  font-size: $font-size-base;
+}
+
+.error {
+  margin-top: 0.25rem;
+  font-size: 12px;
+  color: red;
+}
+
+.form-control-sm {
+  height: $input-height-sm;
+  @include font-size($input-font-size-sm);
+}
+
+.form-control-lg {
+  height: $input-height-lg;
+  @include font-size($input-font-size-lg);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+///////// Widget //////////
+.widget-p-none {
+  padding: 0;
+}
+
+.widget-p-sm {
+  padding: 16px;
+}
+
+.widget-p-md {
+  padding: 24px 24px;
+}
+
+.widget-p-lg {
+  padding: 24px 32px;
+}
+
+.charts-tabs-widget {
+  overflow: auto;
+  padding: 24px 24px;
+  min-width: 576px;
+}
+
+///////// Breadcrumbs //////////
+.breadcrumb {
+  margin: 8px 0 0;
+  padding: 0;
+  color: $text-color;
+  background-color: transparent;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
+
+  a {
+    color: $base-dark-gray;
+  }
+}
+
+///////// Grid //////////
+.pl-grid-col {
+  padding-left: 12px;
+}
+.pr-grid-col {
+  padding-right: 12px;
+}
+
+grid-col-padding {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.gutter > [class*='col-'] {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.pr-grid-row {
+  padding-right: 3px;
+}
+
+.pl-grid-row {
+  padding-left: 3px;
+}
+
+///////// Buttons //////////
+.btn {
+  padding: $button-padding;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semi-bold;
+  border-radius: .5rem;
+
+  .btn-success,
+  .btn-info,
+  .btn-warning,
+  .btn-danger {
+    color: $white;
+  }
+  &:hover {
+    color: $white;
+  }
+}
+
+.btn.with-icon {
+  svg {
+    margin-right: 6px;
+  }
+}
+
+.btn-secondary-yellow,
+.btn-secondary-cyan,
+.btn-warning,
+.btn-default,
+.btn-secondary {
+  color: $white;
+}
+
+.btn-lg {
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 8px;
+}
+
+.btn-sm {
+  padding: .25rem .5rem;
+  font-size: .875rem;
+}
+
+.btn-xs {
+  padding: 2px 4px;
+  font-size: .75rem;
+  line-height: 1.5;
+  border-radius: 5px;
+}
+
+.btn, {
+  &:not(.active) {
+    box-shadow: none !important;
+  }
+}
+
+.btn-rounded {
+  @include border-radius(50px);
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .bg-light-#{$color} {
+    @include bg-light($value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .bullet-#{$color} {
+    @include bullet($value);
+  }
+}
+
+.btn-stepper {
+  border: none;
+  background-color: transparent;
+  color: $default;
+  &:hover,
+  &:not(:disabled):not(.disabled):active:focus,
+  &:not(:disabled):not(.disabled):active:hover {
+    background-color: $base-light-gray;
+    color: $violet;
+    border: none;
+    box-shadow: none;
+  }
+
+  &:focus {
+    background-color: $base-light-gray;
+    color: $default;
+    border: none;
+    box-shadow: none;
+    &:hover {
+      color: $violet;
+    }
+  }
+}
+
+///////// Card //////////
+.card {
+  height: 100%;
+}
+
+///////// Progress Bar //////////
+.progress-xs {
+  height: 8px;
+  div {
+    border-radius: 8px;
+  }
+}
+
+.progress-md {
+  height: 16px;
+}
+
+.progress-lg {
+  height: 24px;
+}
+
+.progress-xl {
+  height: 32px;
+}
+
+///////// Dropdowns //////////
+.dropdown-toggle {
+  padding: 8px 12px;
+  font-weight: $font-weight-normal;
+}
+.dropdown-toggle.btn.btn-secondary {
+  background-color: white;
+  color: $base-dark-gray;
+  &:hover {
+    background-color: $base-light-gray;
+  }
+  &:active {
+    color: $base-dark-gray;
+  }
+}
+
+
+.dropdown-menu {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
+  min-width: 100%;
+}
+
+.navbar-dropdown-toggle {
+  color: $text-color;
+  border: none;
+}
+
+.navbar-dropdown {
+  margin-top: 12px;
+  padding: 24px 16px;
+  box-shadow: $widget-shadow;
+  border: none;
+
+  .dropdown-item {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 13px 16px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $base-light-gray;
+    }
+
+    span {
+      margin-left: 8px;
+      font-size: $font-size-base;
+      font-weight: $font-weight-semi-bold;
+      color: $text-color;
+    }
+
+    p {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .logout-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+    padding: 8px 16px;
+  }
+}
+
+.profile-dropdown {
+  @media (max-width: breakpoint-max(sm)) {
+    left: -160px;
+  }
+}
+
+///////// Headings //////////
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: $font-weight-semi-bold;
+}
+
+///////// Headilines //////////
+.headline-1 {
+  font-size: $headline-large;
+  font-weight: $font-weight-semi-bold;
+  line-height: 42px;
+}
+
+.headline-2 {
+  font-size: $headline-medium;
+  font-weight: $font-weight-semi-bold;
+  line-height: 30px;
+}
+
+.headline-3 {
+  font-size: $headline-small;
+  font-weight: $font-weight-semi-bold;
+  line-height: 24px;
+}
+
+///////// Body fonts //////////
+.body-1 {
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: 24px;
+}
+
+.body-2 {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semi-bold;
+  line-height: 21px;
+}
+
+.body-3 {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
+  line-height: 21px;
+}
+
+.label {
+  font-size: $font-size-mini;
+  font-weight: $font-weight-normal;
+  line-height: 18px;
+}
+
+.muted {
+  color: $base-dark-gray;
+}
+
+.description {
+  color: $base-dark-gray;
+}
+
+///////// Icons //////////
+
+.eva {
+  font-size: 24px;
+}
+
+.fa {
+  font-size: 24px;
+}
+
+///////// Tables //////////
+.search-label {
+  float: right;
+}
+.react-bootstrap-table {
+  table {
+    overflow-x: auto;
+    width: 100%;
+  }
+}
+.widget-table-overflow {
+  width: 100%;
+  margin: 0 0 24px;
+
+  th:first-child,
+  td:first-child {
+    padding-left: 24px;
+  }
+
+  .checkbox {
+    padding-left: 8px;
+  }
+
+  th:last-child,
+  td:last-child {
+    padding-right: 24px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+}
+
+.table-bordered th {
+  background-color: $gray-300;
+}
+
+table > thead > tr > th {
+  border-top: none !important;
+  border-bottom-width: 1px !important;
+  text-transform: uppercase;
+}
+
+.table-striped {
+  thead {
+    th {
+      vertical-align: middle;
+      border: none;
+    }
+  }
+  tbody {
+    tr:nth-of-type(odd) {
+      background-color: $base-light-gray;
+    }
+    td {
+      border: none;
+      overflow: auto;
+    }
+  }
+}
+
+.table-hover {
+  tbody tr {
+    @include hover() {
+      background-color: $violet;
+      td {
+        color: white;
+      }
+    }
+  }
+}
+
+.pagination {
+  justify-content: center;
+  align-items: center;
+
+  .page-item.active .page-link {
+    color: $violet;
+    background-color: white;
+  }
+}
+
+.react-bootstrap-table-pagination {
+  margin-top: 1rem;
+}
+
+.page-link {
+  padding: 4px 12px;
+  border: none;
+  &:hover {
+    background-color: transparent;
+    border-color: $pagination-hover-border-color;
+  }
+
+  &:focus {
+    z-index: 3;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.page-item {
+  margin-left: 16px;
+  margin-right: 16px;
+  &:first-child {
+    .page-link {
+      border: none;
+      line-height: 1;
+
+      @media (max-width: breakpoint-max(md)) {
+        margin-right: 8px;
+      }
+    }
+  }
+  &:last-child {
+    .page-link {
+      border: none;
+      line-height: 1;
+
+      @media (max-width: breakpoint-max(md)) {
+        margin-left: 8px;
+      }
+    }
+  }
+  @media (max-width: breakpoint-max(md)) {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+
+.pagination-borderless {
+  .page-item {
+    .page-link {
+      border: none;
+      color: $pagination-disabled-color;
+    }
+    &.active .page-link {
+      z-index: 3;
+      color: $violet;
+      background-color: transparent;
+      border: none;
+    }
+
+    &:first-child {
+      .page-link {
+        color: $violet;
+      }
+    }
+    &:last-child {
+      .page-link {
+        color: $violet;
+      }
+    }
+    &.disabled .page-link {
+      color: $pagination-disabled-color;
+      pointer-events: none;
+      cursor: auto;
+      background-color: $pagination-disabled-bg;
+      border-color: $pagination-disabled-border-color;
+    }
+  }
+}
+
+///////// Links //////////
+a.badge {
+  &:hover {
+    color: $white;
+  }
+}
+
+///////// Badges //////////
+.badge {
+  padding: 4px 8px;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semi-bold;
+  color: $white;
+  border-radius: 4px;
+
+  img {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+  }
+  svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    vertical-align: bottom;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .badge-inverse-#{$color} {
+    @include badge-inverse($value);
+  }
+}
+
+.badge-pill {
+  border-radius: $badge-pill-border-radius;
+}
+
+///////// Checkboxes //////////
+.checkbox {
+  padding-left: 8px;
+  display: flex;
+  margin-bottom: 4px;
+}
+.checkbox label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 5px;
+}
+.checkbox label::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  margin-left: -20px;
+  border: 1px solid $base-middle-gray;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.checkbox label::after {
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 0;
+  top: 0;
+  margin-left: -20px;
+  padding-left: 3px;
+  padding-top: 1px;
+  font-size: 11px;
+  color: #555555;
+}
+
+.checkbox input[type='checkbox']{
+  opacity: 0;
+  z-index: 1;
+}
+
+.checkbox input[type='checkbox']:disabled + label::before {
+  background-color: #eeeeee;
+  cursor: not-allowed;
+}
+
+@each $color, $value in $theme-colors {
+  .checkbox-#{$color} input[type='checkbox']:checked + label::before {
+    @include checkbox($value);
+  }
+}
+
+input[type='checkbox'].styled:checked + label:after {
+  top: 2px;
+  content: url("../components/Icons/checkmark.svg");
+}
+input[type='checkbox'] .styled:checked + label::before {
+  color: #fff;
+}
+input[type='checkbox'] .styled:checked + label::after {
+  color: #fff;
+}
+
+///////// Radio //////////
+.radio {
+  padding-left: 8px;
+}
+
+///////// Tabs //////////
+
+.nav-tabs {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .nav-link {
+    margin-bottom: -$nav-tabs-border-width;
+    border: $nav-tabs-border-width solid transparent;
+    color: $base-dark-gray;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    @include hover-focus() {
+      border-color: $nav-tabs-link-hover-border-color;
+    }
+
+    &.disabled {
+      color: $base-dark-gray;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $violet;
+    background-color: $white;
+    border-color: transparent;
+    border-bottom: 2px solid $violet;
+  }
+
+  .nav-link:hover {
+    color: $violet;
+    border-color: transparent;
+    border-bottom: 2px solid $violet;
+    }
+}
+
+////////// Modals /////////
+.modal-header {
+  border-bottom: none;
+}
+.modal-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.modal-body {
+  font-size: 14px;
+  font-weight: 400;
+  color: $base-dark-gray;
+}
+
+////////// Alerts /////////
+.alert {
+  border: none;
+  padding: 12px 36px 12px 16px;
+  color: $white;
+
+  .btn {
+    border: none;
+  }
+
+  hr {
+    width: 100%;
+    border-top-color: $white;
+  }
+
+  button.close {
+    font-weight: $font-weight-thin;
+    font-size: 20px;
+    text-shadow: none;
+    opacity: 1;
+    color: #fff;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: auto;
+    right: 16px;
+    margin-left: 8px;
+
+    &.alert-transparent {
+      color: inherit;
+      opacity: 1;
+    }
+  }
+}
+
+.alert-rounded {
+  border-radius: 50px;
+}
+
+.alert-success {
+  background: theme-color('success');
+  color: $white;
+
+  &.alert-transparent {
+    color: theme-color('success');
+    background: rgba(theme-color('success'), $alert-transparent);
+  }
+}
+
+.alert-info {
+  background: theme-color('info');
+  color: $white;
+
+  &.alert-transparent {
+    color: theme-color('info');
+    background: rgba(theme-color('info'), $alert-transparent);
+  }
+}
+
+.alert-warning {
+  background: theme-color('warning');
+  color: $white;
+
+  &.alert-transparent {
+    color: theme-color('warning');
+    background: rgba(theme-color('warning'), $alert-transparent);
+  }
+}
+
+.alert-danger {
+  background: theme-color('danger');
+  color: $white;
+
+  &.alert-transparent {
+    color: theme-color('danger');
+    background: rgba(theme-color('danger'), $alert-transparent);
+  }
+}
+
+.alert-primary {
+  background: theme-color('primary');
+  color: $white;
+
+  &.alert-transparent {
+    color: theme-color('primary');
+    background: rgba(theme-color('primary'), $alert-transparent);
+  }
+}
+
+///////// Notification button //////////
+.notification-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  color: $white;
+}
+
+///////// Toasts //////////
+
+.Toastify__toast-container {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  width: auto;
+}
+.Toastify__toast {
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.Toastify__toast-body {
+  padding: 0;
+  width: 460px;
+}
+
+///////// Bullet //////////
+.bullet {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  display: inline-block;
+  &.bullet-xs {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  &.bullet-sm {
+    width: 0.714rem;
+    height: 0.714rem;
+  }
+  &.bullet-lg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+///////// Other //////////
+.no-border {
+  border: none;
+}
+.nav {
+  .dropdown-toggle {
+    background-color: transparent;
+  }
+}
+
+.dropdown-toggle::after {
+margin-left: 0.255em;
+font-family: Line Awesome Free, sans-serif;
+content: "\F107";
+border: none;
+width: auto;
+height: auto;
+vertical-align: baseline;
+font-size: 85%;
+font-weight: 600;
+margin-left: 32px;
+
+  @media (max-width: breakpoint-max(xs)) {
+    display: none;
+  }
+}
+
+///////// Forms /////////
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: $spacer;
+  line-height: inherit;
+  color: $base-dark-gray;
+  border: 0;
+  border-bottom: 1px solid $base-middle-gray;
+  font-size: 16px;
+  font-weight: $font-weight-normal;
+}
+
+form-group {
+  display: flex;
+  align-items: center;
+}
+
+///////// Code //////////
+
+code {
+  font-size: 90%;
+  background-color: #fff2ef;
+  padding: 0;
+}
+
+pre {
+  code {
+    background-color: transparent;
+  }
+}
+
+///////// React Datepicker /////////
+.react-datepicker__input-container {
+  input {
+    padding: 4px 8px;
+    border: 1px solid $base-dark-gray;
+    border-radius: 8px;
+    color: $base-dark-gray;
+  }
+  button::after {
+    background-color: $violet;
+  }
+}
+
+.react-datepicker__day--selected {
+  background-color: $violet;
+}
+
+.react-datepicker__time-container,
+.react-datepicker__time,
+.react-datepicker__time-box,
+ul.react-datepicker__time-list,
+li.react-datepicker__time-list-item--selected {
+  background-color: $violet;
+}
+
+///////// Colorpicker /////////
+.rc-color-picker-wrap {
+  display: flex;
+  span {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.fa-handshake-o {
+  color: $success;
+  font-size: 45px;
+}
+
+///////// Class helpers /////////
+.border-radius-0 {
+  border-radius: 0;
+}
+
+.border-radius-left-0 {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.border-radius-right-0 {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+}
+
+.fake-link {
+  color: $violet;
+  cursor: pointer;
+  &:hover {
+    color: $default;
+  }
+}
+
+
+// Calendar
+.fc {
+  // Toolbar
+  .fc-toolbar {
+    flex-wrap: wrap;
+    flex-direction: row !important;
+    .fc-prev-button,
+    .fc-next-button {
+      display: inline-block;
+      background-color: transparent;
+      border-color: transparent;
+      .fc-icon {
+        color: $violet;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: transparent !important;
+        border-color: transparent !important;
+        box-shadow: none !important;
+      }
+    }
+    .fc-prev-button {
+      padding-left: 0 !important;
+    }
+    .fc-toolbar-chunk:first-child {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .fc-toolbar-chunk:last-child {
+      .fc-button-primary {
+        &:not(.fc-prev-button):not(.fc-next-button) {
+          background-color: transparent;
+          border-color: $violet;
+          color: $violet;
+
+          &.fc-button-active,
+          &:hover {
+            background-color: rgba($color: $violet, $alpha: 0.1) !important;
+            border-color: $violet !important;
+            color: $violet;
+          }
+        }
+      }
+    }
+    .fc-button {
+      padding: 0.5rem;
+      text-transform: capitalize;
+      &:active,
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .fc-button-group {
+      .fc-button {
+        &:focus {
+          box-shadow: none;
+        }
+      }
+      .fc-button-primary {
+        &:not(.fc-prev-button):not(.fc-next-button) {
+          background-color: transparent;
+          border-color: $violet;
+          color: $violet;
+          &.fc-button-active,
+          &:hover {
+            background-color: rgba($color: $violet, $alpha: 0.1) !important;
+            border-color: $violet !important;
+            color: $violet;
+          }
+        }
+        &.fc-sidebarToggle-button {
+          border: 0;
+          i, svg {
+            height: 21px;
+            width: 21px;
+            font-size: 21px;
+          }
+        }
+      }
+      .fc-sidebarToggle-button {
+        padding-left: 0;
+        background-color: transparent !important;
+        color: $base-dark-gray !important;
+
+        &:not(.fc-prev-button):not(.fc-next-button):hover {
+          background-color: transparent !important;
+        }
+
+        & + div {
+          margin-left: 0;
+        }
+      }
+      .fc-dayGridMonth-button {
+        padding: $fc-day-toggle-btn-padding;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .fc-timeGridWeek-button {
+        padding: $fc-day-toggle-btn-padding;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+      }
+    }
+    .fc-timeGridDay-button {
+      padding: $fc-day-toggle-btn-padding;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+    & > * > :not(:first-child) {
+      margin-left: 0rem;
+    }
+    .fc-toolbar-title {
+      margin-left: 0.25rem;
+    }
+    .fc--button:empty,
+    .fc-toolbar-chunk:empty {
+      display: none;
+    }
+  }
+
+  // Calendar head & body common
+  tbody td,
+  thead th {
+    border-color: $base-middle-gray;
+    &.fc-col-header-cell {
+      border-right: 0;
+      border-left: 0;
+    }
+  }
+  .fc-view-harness {
+    min-height: $fc-calendar-height;
+  }
+
+  // Daygrid
+  .fc-scrollgrid-section-liquid > td {
+    border-borrom: 0;
+  }
+  .fc-daygrid-event-harness {
+    .fc-event {
+      font-size: $fc-event-font-size;
+      font-weight: $fc-event-font-weight;
+      padding: $fc-event-padding-y $fc-event-padding-x;
+    }
+    & + .fc-daygrid-event-harness {
+      margin-top: 0.3rem;
+    }
+  }
+  .fc-daygrid-bottom {
+    margin-top: 0.3rem;
+  }
+  .fc-daygrid-day {
+    padding: 5px;
+    .fc-daygrid-day-top {
+      flex-direction: row;
+    }
+  }
+  // All Views Event
+  .fc-daygrid-day-number,
+  .fc-timegrid-slot-label-cushion,
+  .fc-list-event-time {
+    color: $base-dark-gray;
+  }
+  .fc-day-today {
+    background: $base-light-gray !important;
+    background-color: $base-light-gray !important;
+  }
+
+  // Timegrid
+  .fc-timegrid {
+    .fc-scrollgrid-section {
+      .fc-col-header-cell,
+      .fc-timegrid-axis {
+        border-color: $base-middle-gray;
+        border-left: 0;
+        border-right: 0;
+      }
+    }
+    .fc-timegrid-axis {
+      &.fc-scrollgrid-shrink {
+        .fc-timegrid-axis-cushion {
+          text-transform: capitalize;
+          color: $base-dark-gray;
+        }
+      }
+    }
+    .fc-timegrid-slots {
+      .fc-timegrid-slot {
+        height: 3rem;
+        .fc-timegrid-slot-label-frame {
+          text-align: center;
+          .fc-timegrid-slot-label-cushion {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .fc-timegrid-divider {
+      display: none;
+    }
+  }
+}
+
+// App Calendar Specific Styles
+.app-calendar {
+  position: relative;
+
+
+  .app-calendar-sidebar {
+    border-radius: 8px;
+    position: absolute;
+    right: -$fc-sidebar-width;
+    width: $fc-sidebar-width;
+    height: auto;
+    z-index: 5;
+    background-color: $white;
+    flex-basis: $fc-sidebar-width;
+    transition: all 0.2s, background 0s, border 0s;
+    &.show {
+      left: 0;
+    }
+  }
+
+  // right sidebar area styles
+  .event-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    z-index: 15;
+    transform: translateX(120%);
+    transition: all 0.3s ease-in-out;
+
+    .card {
+      height: calc(100vh - 12.96rem);
+      height: calc(var(--vh, 1vh) * 100 - 12.96rem);
+      border-radius: 0 $border-radius-sm $border-radius-sm 0;
+
+      .close-bar {
+        cursor: pointer;
+      }
+
+      .todo-item-action {
+        width: 6rem;
+
+        .todo-item-info,
+        .todo-item-favorite,
+        .dropdown {
+          cursor: pointer;
+          line-height: 1.5;
+        }
+        .dropdown .dropdown-menu .dropdown-item {
+          padding: 0.14rem 1.428rem;
+        }
+        .dropdown-toggle::after {
+          display: none;
+        }
+      }
+    }
+
+    &.show {
+      transform: translateX(0);
+    }
+  }
+
+
+  @media (min-width: 992px) {
+    .app-calendar-sidebar {
+      position: static;
+      height: auto;
+      box-shadow: none !important;
+
+      .flatpickr-days {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.body-content-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  display: block;
+  z-index: 4;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  &.show {
+    visibility: visible;
+    transition: all 0.3s ease;
+    opacity: 1;
+    background-color: rgba($black, 0.2);
+    border-radius: $border-radius/2;
+  }
+}
+
+.event-sidebar {
+  .badge:empty {
+    display: inline-block;
+  }
+  .react-select {
+    z-index: 2;
+  }
+}
+
+////// Calendar Modal Component
+// Slide In Modal //
+.modal-slide-in,
+.modal-slide-in .modal {
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.modal-slide-in {
+  .modal-dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    margin: 0;
+    max-width: none;
+    width: ($modal-slide-in-width-sm - 5);
+
+    .modal-content {
+      padding-bottom: ($modal-title-line-height * $close-font-size) + $modal-header-padding-y;
+      padding-top: ($modal-title-line-height * $close-font-size) + $modal-header-padding-y;
+      overflow: auto;
+      border-radius: 0;
+      height: 100%;
+    }
+
+    .modal-body {
+      padding-bottom: 0;
+      padding-top: 0;
+      margin: auto 0;
+      flex-grow: 0;
+    }
+
+    @media (min-width: (map-get($grid-breakpoints, sm))) {
+      width: $modal-slide-in-width;
+    }
+
+    &.sidebar-sm {
+      width: $modal-slide-in-width-sm;
+    }
+    &.sidebar-lg {
+      @media (min-width: (map-get($grid-breakpoints, sm))) {
+        width: $modal-slide-in-width-lg;
+      }
+    }
+  }
+
+  .close {
+    top: $modal-header-padding-y / 2;
+    z-index: 10;
+    transform: none;
+    position: absolute;
+    top: 1.5rem;
+    right: $modal-header-padding-x;
+    margin: 0;
+    padding: 0 !important;
+    line-height: 0.5;
+    transform: translate(0, -50%);
+  }
+}
+
+// Slide from Right
+.modal-slide-in.fade .modal-dialog,
+.modal-slide-in .modal.fade .modal-dialog {
+  transform: translateX(100%);
+  transition: transform 0.1s ease-out;
+}
+
+.modal-slide-in.show .modal-dialog,
+.modal-slide-in .modal.show .modal-dialog {
+  transform: translateX(0) !important;
+  transition: transform 0.1s ease-out;
+}
+
+// To remove Max-width of XS Modal in Small Screen
+
+@media (max-width: 576px) {
+  .modal {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    .modal-xs,
+    .modal-sm {
+      max-width: unset;
+    }
+    &.modal-sticky .modal-dialog {
+      margin-right: 0.2rem !important;
+      margin-left: 0.2rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+////// Flatpickr
+.flatpickr-calendar {
+  .flatpickr-day {
+    color: $body-color;
+    &.today {
+      border-color: $primary;
+      &:hover {
+        background: transparent;
+        color: $body-color;
+      }
+    }
+
+    &.selected,
+    &.selected:hover {
+      background: $primary;
+      color: $white;
+      border-color: $primary;
+    }
+
+    &.inRange,
+    &.inRange:hover {
+      background: lighten($color: $primary, $amount: 30%);
+      border-color: lighten($color: $primary, $amount: 30%);
+      box-shadow: -5px 0 0 lighten($color: $primary, $amount: 30%), 5px 0 0 lighten($color: $primary, $amount: 30%);
+    }
+    &.startRange,
+    &.endRange,
+    &.startRange:hover,
+    &.endRange:hover {
+      background: $primary;
+      color: $white;
+      border-color: $primary;
+    }
+
+    &.selected.startRange + .endRange:not(:nth-child(7n + 1)),
+    &.startRange.startRange + .endRange:not(:nth-child(7n + 1)),
+    &.endRange.startRange + .endRange:not(:nth-child(7n + 1)) {
+      box-shadow: -10px 0 0 $primary;
+    }
+
+    &.flatpickr-disabled,
+    &.prevMonthDay,
+    &.nextMonthDay {
+      color: $gray-300;
+    }
+
+    &:hover {
+      background: $base-middle-gray;
+    }
+  }
+  &:after,
+  &:before {
+    display: none;
+  }
+
+  .flatpickr-months {
+    .flatpickr-prev-month,
+    .flatpickr-next-month {
+      top: -5px;
+      &:hover i,
+      &:hover svg {
+        fill: $primary;
+      }
+    }
+  }
+  .flatpickr-current-month span.cur-month {
+    font-weight: 300;
+  }
+}
+
+// Time picker hover & focus bg color
+.flatpickr-time input:hover,
+.flatpickr-time .flatpickr-am-pm:hover,
+.flatpickr-time input:focus,
+.flatpickr-time .flatpickr-am-pm:focus {
+  background: $white;
+}
+
+//Dark layout
+.dark-layout {
+  .flatpickr-calendar {
+    background: $base-light-gray;
+    border-color: $base-light-gray;
+    box-shadow: none;
+    .flatpickr-months {
+      i,
+      svg {
+        fill: $base-middle-gray;
+      }
+    }
+    .flatpickr-month {
+      color: $base-middle-gray;
+    }
+    .flatpickr-weekwrapper .flatpickr-weeks {
+      box-shadow: 1px 0 0 $base-dark-gray;
+    }
+    .flatpickr-weekday {
+      color: $base-middle-gray;
+    }
+
+    .flatpickr-day {
+      &,
+      &.today:hover {
+        color: $base-middle-gray;
+      }
+      &.selected {
+        color: $white;
+      }
+
+      &.prevMonthDay,
+      &.nextMonthDay,
+      &.flatpickr-disabled {
+        color: $gray-700 !important;
+      }
+      &.inRange,
+      &.inRange:hover {
+        background: $default;
+        border-color: $default;
+        box-shadow: -5px 0 0 $default, 5px 0 0 $default;
+      }
+      &:hover:not(.selected):not(.today):not(.startRange):not(.endRange) {
+        color: $base-middle-gray;
+        border-color: $default;
+      }
+    }
+
+    .flatpickr-days .flatpickr-day {
+      &:hover:not(.selected):not(.today):not(.startRange):not(.endRange) {
+        background: $default;
+      }
+    }
+
+    .flatpickr-time {
+      border-color: $base-light-gray !important;
+
+      .numInput,
+      .flatpickr-am-pm {
+        color: $base-middle-gray;
+        &:hover {
+          background: $base-light-gray;
+        }
+      }
+
+      .arrowUp:after {
+        border-bottom-color: $base-middle-gray;
+      }
+      .arrowDown:after {
+        border-top-color: $base-middle-gray;
+      }
+    }
+  }
+  // Time picker hover & focus bg color
+  .flatpickr-time input:hover,
+  .flatpickr-time .flatpickr-am-pm:hover,
+  .flatpickr-time input:focus,
+  .flatpickr-time .flatpickr-am-pm:focus {
+    background: $base-light-gray;
+  }
+}
+
+// Added bg color for flatpickr input only as it has default readonly attribute
+.flatpickr-input[readonly],
+.flatpickr-input ~ .form-control[readonly],
+.flatpickr-human-friendly[readonly] {
+  background-color: inherit;
+  opacity: 1 !important;
+}
+
+.flatpickr-weekdays {
+  margin-top: 8px;
+}
+
+.flatpickr-current-month {
+  .flatpickr-monthDropdown-months {
+    -webkit-appearance: none;
+  }
+
+  .flatpickr-monthDropdown-months,
+  .numInputWrapper {
+    font-size: 1.1rem;
+    border-radius: 4px;
+    padding: 2px;
+    transition: all 0.15s ease-out;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+////// Profile page components and elements
+.avatar {
+  white-space: nowrap;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1rem;
+  text-align: center;
+  vertical-align: middle;
+
+  &.avatar-sm {
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &.avatar-md {
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &.avatar-lg {
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.avatar-group {
+  display: flex;
+  justify-content: flex-start;
+  .avatar {
+    transition: all 0.16s ease;
+    &:hover {
+      transition: all 0.25s ease;
+    }
+    &.zoom-in:hover {
+      transform: translateY(-4px) scale(1.07);
+    }
+  }
+  // Avatar Group Sizings
+  .avatar:not(:first-child) {
+    margin-left: -0.5rem;
+  }
+  .avatar-sm:not(:first-child) {
+    margin-left: .25rem;
+  }
+  .avatar-md:not(:first-child) {
+    margin-left: .35rem;
+  }
+  .avatar-lg:not(:first-child) {
+    margin-left: .5rem;
+  }
+}
+
+////// React-chrono timeline
+.vertical-item-row {
+  //height: 50px;
+}
+.card-content-wrapper {
+  section {
+    min-height: auto;
+    background: none;
+  }
+}
+
+///// User Management Page
+.page-title {
+  margin: 0 0 calc(1rem + 6px);
+}
+
+.page-top-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  & .close {
+    margin-left: 25px;
+  }
+}
+
+/* ----------- React Bootstrap Table ----------- */
+.react-bs-table table {
+  table-layout: fixed;
+}
+@include media-breakpoint-down(sm) {
+  .react-bs-table table {
+    table-layout: inherit;
+  }
+}
+
+.react-bs-table table td,
+.react-bs-table table th {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.react-bootstrap-table-page-btns-ul {
+  float: right;
+  margin-top: 0;
+  margin-left: 16px;
+  margin-right: 16px;
+
+}
+
+.pagination-borderless .page-item .page-link {
+  margin: 0;
+  border: none;
+  font-size: 16px;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+

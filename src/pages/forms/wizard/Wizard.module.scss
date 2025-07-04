@@ -1,0 +1,90 @@
+@import "../../../styles/helpers";
+
+.formBlock {
+  border-radius: 8px;
+}
+
+.jumbotronBg {
+  background-size: cover;
+  background: linear-gradient(135deg, rgba(47, 51, 167, 50) 0%, rgba(77, 83, 224, 25) 25%, rgba(0, 165, 255, 50) 100%);
+}
+
+.progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: #bfc2f5;
+}
+
+.progressbar .active {
+  color: $violet-dark;
+}
+
+.progressbar li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  font-size: 15px;
+  width: 25%;
+  float: left;
+  position: relative;
+  font-weight: 400;
+}
+
+.progressbar .account:before {
+  display: flex;
+  justify-content: center;
+  font-family: FontAwesome;
+  content: "\f007";
+}
+
+.progressbar .personal:before {
+  display: flex;
+  justify-content: center;
+  font-family: FontAwesome;
+  content: "\f0d1";
+}
+
+.progressbar .payment:before {
+  display: flex;
+  justify-content: center;
+  font-family: FontAwesome;
+  content: "\f283";
+}
+
+.progressbar .confirm:before {
+  display: flex;
+  justify-content: center;
+  font-family: FontAwesome;
+  content: "\f00c";
+}
+
+.progressbar li:before {
+  width: 50px;
+  height: 50px;
+  line-height: 45px;
+  display: block;
+  font-size: 20px;
+  color: #ffffff;
+  background: #bfc2f5;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  padding: 2px;
+  z-index: 2;
+}
+
+.progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #bfc2f5;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  z-index: 1;
+}
+
+.progressbar li.active:before,
+.progressbar li.active:after {
+  background: $violet-dark;
+}

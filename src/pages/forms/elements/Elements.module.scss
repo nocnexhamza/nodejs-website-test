@@ -1,0 +1,84 @@
+@import "../../../styles/helpers";
+
+.btnIcon {
+  font-size: 14px !important;
+}
+
+.elasticTextarea {
+  width: 100%;
+  border: 1px solid $base-middle-gray;
+  border-radius: 8px;
+  color: $base-dark-gray;
+}
+
+.helpBlock {
+  display: block;
+  margin-top: 8px;
+}
+
+.picker {
+  position: relative;
+}
+
+.swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.popover {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  border-radius: 9px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.upload {
+  opacity: 0;
+}
+
+.uploadLabel {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.imageArea {
+  height: 100px;
+  border: 2px dashed $base-middle-gray;
+  border-radius: 8px;
+  padding: 1.25rem;
+  position: relative;
+}
+
+.imageArea::before {
+  content: 'Uploaded image result';
+  color: $base-dark-gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+.imageArea img {
+  z-index: 2;
+  position: relative;
+}
+
+.dropzone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  height: 150px;
+  border: 2px dashed $base-middle-gray;
+  border-radius: 8px;
+  position: relative;
+}

@@ -1,0 +1,44 @@
+@import "../../../styles/helpers";
+
+.titleCardBody {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.titleCardDescription {
+  width: 50%;
+  @media (max-width: breakpoint-max(md)) {
+    width: 75%;
+  }
+  @media (max-width: breakpoint-max(xs)) {
+    width: 100%;
+  }
+}
+
+.buttonsGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.ratingBlock {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px auto;
+}
+
+.cardProfileInfo {
+  display: flex;
+  flex-direction: row;
+  margin: 24px;
+  img {
+    margin-right: 12px;
+    width: 40px;
+    height: 40px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}

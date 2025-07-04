@@ -1,0 +1,93 @@
+@import "../../styles/helpers";
+
+.profile {
+  background: $violet;
+  border-radius: $border-radius;
+  height: 100%;
+  color: $white;
+  * > {
+    color: $white !important;
+  }
+
+}
+
+.profileTitle {
+  display: flex;
+  margin-bottom: 2rem;
+  img {
+    width: 190px;
+    height: 190px;
+    @media (max-width: breakpoint-max(sm)) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  div {
+    hr {
+      width: 100%;
+      border: none;
+      border-top: 1px solid $base-middle-gray;
+      color: $base-middle-gray;
+    }
+  }
+  i {
+    color: $white;
+  }
+}
+
+.badges {
+  span {
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem auto;
+}
+
+.news {
+  height: 305px;
+  overflow-y: auto;
+}
+
+.chronoWidget {
+  height: auto;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+  section {
+    margin: .5rem 0;
+  }
+}
+
+.widgetRow {
+  height: 100% !important;
+}
+
+.cardsWidgetRow {
+  height: 100% !important;
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.widgetOverflow {
+  section {
+    overflow: auto;
+    white-space: nowrap;
+  }
+  > .headline-1 {
+    color: red;
+  }
+}
+
+.earning {
+  color: $pink;
+}
+
+

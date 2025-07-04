@@ -1,0 +1,9 @@
+@import "../../../styles/helpers";
+
+.amchartsMap {
+  width: 100%;
+  height: 800px;
+  @media (max-width: breakpoint-max(md)) {
+    height: 400px;
+  }
+}

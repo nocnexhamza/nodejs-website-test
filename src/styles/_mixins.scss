@@ -1,0 +1,99 @@
+@mixin badge-inverse($bg) {
+  color: $bg;
+  background-color: $base-light-gray;
+
+  svg {
+    path {
+      fill: $bg;
+    }
+  }
+}
+
+@mixin button-outline-variant($color) {
+  color: $color;
+  border-color: $color;
+
+  svg {
+    path {
+      stroke: $color;
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $white;
+  }
+
+  @include hover() {
+    color: $white;
+    svg {
+      path {
+        stroke: $white;
+      }
+    }
+  }
+}
+
+@mixin button-variant($color) {
+
+  &:focus,
+  &.focus {
+    color: $white;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $white;
+  }
+}
+
+@mixin checkbox($color) {
+  background-color: $color;
+  border-color: $color;
+}
+
+@mixin bg-light($color) {
+  background: rgba($color, 0.12) !important;
+  color: $color !important;
+  border-color: transparent !important;
+  // Calendar background, color and border color
+  &.fc-h-event,
+  &.fc-v-event {
+    color: $color !important;
+    border-color: rgba($color, 0.1);
+
+    .fc-event-main > .fc-event-main-frame > .fc-event-title-container {
+      color: $color !important;
+      //color: var(--fc-event-text-color, #fff);
+    }
+  }
+
+  .fc-event-title-container {
+    color: $color !important;
+  }
+
+  .fc-event-time {
+    color: $color !important;
+  }
+
+
+  .fc-list-event-dot {
+    border-color: $color !important;
+  }
+
+  &.fc-list-event {
+    &:hover td {
+      background: rgba($color, 0.1) !important;
+    }
+
+    .fc-list-event-title {
+      color: $body-color;
+    }
+  }
+}
+
+@mixin bullet($color) {
+  background-color: $color;
+}

@@ -1,0 +1,11 @@
+@import "../../../styles/helpers";
+
+.listBadge {
+  display: flex;
+  justify-content: space-between;
+  span {
+    display: flex;
+    align-items: center;
+    color: $white;
+  }
+}
